@@ -29,7 +29,7 @@ body{
 .welcome-heading{
   font-weight: 900;
   font-size: 60px;
-  color: rgb(18, 41, 55);
+  color: #0f4679;
 }
 .weather-img{
   width: 60px;
@@ -54,6 +54,23 @@ input:hover,
 input:focus {
   box-shadow: 0px 0px 0px 4px rgb(174, 201, 216);
 }
+.btn-container{
+  width: auto;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  border: none;
+  background: #72ade6;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #62a7e8;
+}
 
 
 /* response page  */
@@ -64,6 +81,13 @@ input:focus {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.home-arrow {
+  width: 30px;
+  position: absolute;
+  top: 5%;
+  left: 6%;
+
 }
 .city-name{
   color: #fff;
@@ -89,9 +113,119 @@ flex-direction: column;
   color: #000;
  
 }
+.main{
+  color: #fff;
+  margin-bottom: 30px;
+}
 .extra-info{
   width: 50%;
   display: flex;
   justify-content: space-between;
   color: #fff;
+}
+
+
+
+/* loading state  */
+.loading{
+  height: 100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.circle-container {
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: .3;
+  transition: opacity ease .3s;
+  animation-name: animate;
+  animation-duration: 1s;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+}
+
+.circle-2 {
+  animation-delay: .4s;
+}
+.circle-3 {
+  animation-delay: .8s;
+}
+
+
+
+
+@keyframes animate {
+  from {opacity: .3;}
+  to {opacity: 1;}
+}
+
+
+/* responsiveness  */
+@media (max-width: 500px) and (min-width: 270px) {
+  .heading-img{
+    display: flex;
+    align-items: center;
+    width: 60%;
+  }
+  .welcome-heading{
+    font-weight: 800;
+    font-size: 40px;
+  }
+  .weather-img{
+    width: 40px;
+    margin-left: 20px;
+  }
+  input {
+  width: 80%;
+    height: 28px;
+    
+  }
+
+
+
+  .home-arrow {
+    width: 25px;
+    position: absolute;
+    top: 5%;
+    left: 6%;
+  
+  }
+  .city-name{
+    font-size: 33px;
+  }
+  .country{
+    color: #fff;
+  }
+  .temp-container {
+    width: 220px;
+  height: 220px;
+  background: #FFFFFF;
+  box-shadow: 0px 28px 36px rgba(56, 127, 143, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  flex-direction: column;
+  }
+  .temp{
+    font-size: 33px;
+    font-weight: 600;
+    color: #000;
+   
+  }
+  .extra-info{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 14px;
+  }
+
 }
