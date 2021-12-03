@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Rubik;
 }
+body{
+  /* background: #fff; */
+  /* background: linear-gradient(153.06deg, #c0eaed -0.31%, #afccf5 99.69%); */
+  background: linear-gradient(153.06deg, #B58ECC -0.31%, #5DE6DE 99.69%);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-page{
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.home{
+  margin-bottom: 100px;
+}
+.heading-img{
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+.welcome-heading{
+  font-weight: 900;
+  font-size: 60px;
+  color: rgb(18, 41, 55);
+}
+.weather-img{
+  width: 60px;
+  margin-left: 20px;
+}
+input {
+width: 80%;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto 0;
+  padding: 5px 14px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  box-shadow: 0px 0px 0px 1px #e0e0e0;
+  transition: ease-in-out box-shadow 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+input:hover,
+input:focus {
+  box-shadow: 0px 0px 0px 4px rgb(174, 201, 216);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* response page  */
+.response-page{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.city-name{
+  color: #fff;
+}
+.country{
+  color: #fff;
+}
+.temp-container {
+  width: 240px;
+height: 240px;
+background: #FFFFFF;
+box-shadow: 0px 28px 36px rgba(56, 127, 143, 0.4);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 30px 0;
+flex-direction: column;
+}
+.temp{
+  font-size: 40px;
+  font-weight: 600;
+  color: #000;
+ 
+}
+.extra-info{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
 }
