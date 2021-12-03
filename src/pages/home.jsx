@@ -16,7 +16,7 @@ const Home = () => {
     setCity(e.target.value);
   };
   const submit = (e) => {
-      if(city === "" || city.includes(" ")){
+      if(city === ""){
           alert("Enter city name")
           navigate("/")
       } else {
