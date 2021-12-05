@@ -8,7 +8,7 @@ const WeatherResponse = () => {
     "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
 
   return (
-    <div>
+    <div className="response-page-container">
         <div className="response-page">
           <Link to="/">
             <img className="home-arrow" src={leftArrow} alt="" />
